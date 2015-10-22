@@ -17,9 +17,17 @@ Therefore, to build follow the Angstrom-distribution, except
 	$ cd dcim3.angstrom
 	$ MACHINE=am335x-evm ./oebb.sh config am335x-evm
 	$ . environment-angstrom
+You may have to delete a recipe or two .bb, to get the build to complete, build should pick up   am335x-psp_3.2.bb
+in the following "kernel" build.
 	$ bitbake virtual/kernel
-if successful, may have to delete a recipe  .bb, should pick up   am335x-psp_3.2.bb
+Next you may want a test image.
 	$ bitbake core-image-minimal
+
+You may NOT want to do the following pull,update. This will update from multiple sites and pull in updates which have not been tested.  
+If your intention is to update and create a whole new image for DCIM then yes.
+
+	$ git pull
+	$ ./oebb.sh update
 
 
 
