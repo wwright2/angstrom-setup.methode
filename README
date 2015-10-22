@@ -12,7 +12,18 @@ Following are the Original instructions from angstrom-distribution.
        git://github.com/Angstrom-distribution/setup-scripts.git
 
 
-----------------------------
+Therefore, to build follow the Angstrom-distribution, except 
+	$ git clone https://github.com/wwright2/angstrom-setup.methode.git dcim3.angstrom
+	$ cd dcim3.angstrom
+	$ MACHINE=am335x-evm ./oebb.sh config am335x-evm
+	$ . environment-angstrom
+	$ bitbake virtual/kernel
+if successful, may have to delete a recipe  .bb, should pick up   am335x-psp_3.2.bb
+	$ bitbake core-image-minimal
+
+
+
+----ANGSTROM.DISTRIBUTION------------------------
 These are the setup scripts for the Angstrom buildsystem. If you want to (re)build packages or images for Angstrom, this is the thing to use.
 The Angstrom buildsystem is using various components from the Yocto Project, most importantly the Openembedded buildsystem, the bitbake task executor and various application and BSP layers.
 
