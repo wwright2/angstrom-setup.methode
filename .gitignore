@@ -3,8 +3,10 @@ build
 sources/*
 deploy/
 !sources/layers.txt
+!sources/layers.txt.orig
 conf/auto.conf
-conf/bblayers.conf
+!conf/bblayers.conf
+!conf/bblayers.conf.orig
 conf/sanity_info
 conf/site.conf
 pseudodone
